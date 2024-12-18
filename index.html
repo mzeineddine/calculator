@@ -17,10 +17,37 @@
     <label for="inf">Postfix</label> -->
 
     <div id="calculator">
-        <input type="text" name="" id="expression" placeholder="Enter expression">
-        <button id="clear" onclick="clear()">Clear</button>
-        <button id="calculate" onclick="calculate()">=</button>
-        <p id="result"></p>
+        <input type="text" name="" id="expression">
+        <!-- <button id="clear" onclick="clear()">Clear</button>
+        <button id="calculate" onclick="calculate()">=</button> -->
+        <br>
+        <div id="keypad">
+            <button class = "p" value="7">7</button>
+            <button class = "p" value="8">8</button>
+            <button class = "p" value="9">9</button>
+            <button onclick="backspace()">DEL</button>
+            <button onclick="cleare()">AC</button>
+
+            <br>
+            <button class = "p" value="4">4</button>
+            <button class = "p" value="5">5</button>
+            <button class = "p" value="6">6</button>
+            <button class = "p" value="*">*</button>
+            <button class = "p" value="/">/</button>
+
+            <br>
+            <button class = "p" value="1">1</button>
+            <button class = "p" value="2">2</button>
+            <button class = "p" value="3">3</button>
+            <button class = "p" value="+">+</button>
+            <button class = "p" value="-">-</button>
+
+            <br>
+            <button class = "p"  value=" ">" "</button>
+            <button class = "p" value="0">0</button>
+            <button onclick="calculate()">=</button>
+
+        </div>
     </div>
 </body>
 </html>
