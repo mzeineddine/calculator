@@ -20,35 +20,44 @@
         </div>
     </div>
 
-    <div id="calculator">
-        <input type="text" name="" id="expression">
-        <br>
-        <div id="keypad">
-            <button class = "p" value="7">7</button>
-            <button class = "p" value="8">8</button>
-            <button class = "p" value="9">9</button>
-            <button class = "functional" onclick="backspace()">DEL</button>
-            <button class = "functional" onclick="cleare()">AC</button>
-
+    <div class="main">
+        <div id="calculator">
+            <input type="text" name="" id="expression">
             <br>
-            <button class = "p" value="4">4</button>
-            <button class = "p" value="5">5</button>
-            <button class = "p" value="6">6</button>
-            <button class = "p" value="*">*</button>
-            <button class = "p" value="/">/</button>
-
-            <br>
-            <button class = "p" value="1">1</button>
-            <button class = "p" value="2">2</button>
-            <button class = "p" value="3">3</button>
-            <button class = "p" value="+">+</button>
-            <button class = "p" value="-">-</button>
-
-            <br>
-            <button class = "p"  value=" ">"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</button>
-            <button class = "p" value="0">0</button>
-            <button class = "functional" onclick="getType()">=</button>
+            <div id="keypad">
+                <button class = "p" value="7">7</button>
+                <button class = "p" value="8">8</button>
+                <button class = "p" value="9">9</button>
+                <button class = "functional" onclick="backspace()">DEL</button>
+                <button class = "functional" onclick="cleare()">AC</button>
+    
+                <br>
+                <button class = "p" value="4">4</button>
+                <button class = "p" value="5">5</button>
+                <button class = "p" value="6">6</button>
+                <button class = "p" value="*">*</button>
+                <button class = "p" value="/">/</button>
+    
+                <br>
+                <button class = "p" value="1">1</button>
+                <button class = "p" value="2">2</button>
+                <button class = "p" value="3">3</button>
+                <button class = "p" value="+">+</button>
+                <button class = "p" value="-">-</button>
+    
+                <br>
+                <button class = "p"  value=" ">"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</button>
+                <button class = "p" value="0">0</button>
+                <button class = "functional" onclick="getType()">=</button>
+            </div>
         </div>
+        <ul class="guid">
+            <li>prefix example: + 3 4 or +34 then the result must be 7</li>
+            <li>postfix example:  3 4 + or 34+ then the result must be 7</li>
+            <li>Enter in the input field the postfix or prefix expression to be calculated</li>   
+            <li>Note that when caluclating numbers greater than 9 you have to use spaces</li>
+            <li>You can input via keyboard and by pressing on the buttons in the keypad of the calculator</li>
+        </ul>
     </div>
 </body>
 </html>

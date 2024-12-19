@@ -7,6 +7,7 @@ let buttons;
 let mode;
 document.addEventListener("DOMContentLoaded", loaded)
 
+// Add and remove light effect to and from the element that have to be affected when changing the theme
 function changeTheme(){
     let functionalButtons = document.querySelectorAll(".functional");
     if(mode.checked){
@@ -31,6 +32,7 @@ function backspace(){
     input.value = input.value.slice(0,-1);
 }
 
+// press the button and append it to the screen
 function print(event){
     console.log("click");
     // Prevent any key press neither nb nor op and prevent double spaces
@@ -44,8 +46,8 @@ function print(event){
     input.value += event.target.value;
 }
 
+// Prevent any key press neither nb nor op and prevent double spaces
 function checkKey(event){
-    // Prevent any key press neither nb nor op and prevent double spaces
     if(event.key == "Enter"){
         getType();
     }
@@ -58,6 +60,7 @@ function checkKey(event){
     }
 }
 
+// calculate the equation using a stack for numbers and pop as an operator approch
 function calc(type, arr){
     let nb = [];
     for(let i = 0; i <arr.length; i++){
@@ -100,14 +103,18 @@ function calc(type, arr){
     }
 }
 
+// find the type entered by the user and calculate
 function getType(){ 
     // Check the type of expression
-    let arr = input.value.trim().split(" ");
-    if(!isNaN(arr[0]))
-        calc("post", arr);
-    else if(operators.includes(arr[0])){
-        arr = arr.reverse();
-        calc("pre", arr);
+    let splitted_data = input.value.trim().split(" ");
+    if (splitted_data.length == 1){
+        splitted_data = input.value.trim().split("");
+    }
+    if(!isNaN(splitted_data[0]))
+        calc("post", splitted_data);
+    else if(operators.includes(splitted_data[0])){
+        splitted_data = splitted_data.reverse();
+        calc("pre", splitted_data);
     }
 }
 
