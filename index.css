@@ -3,15 +3,88 @@
     margin: 0px;
 }
 body{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     background-image: url("./images/bg.jpg");
-    
 }
+
+#header {
+    width: 100%;
+    font-weight: bold;
+    font-size: 200%;
+    background-color: #0a1b25;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+#header p {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    background-color: #2e94bc;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 23px;
+    width: 23px;
+    left: 6px;
+    bottom: 6px;
+    background-image: url("./images/lighDark.png");
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2e94bc;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2e94bc;
+}
+  
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+  
+.slider:before {
+    border-radius: 50%;
+}
+
 #calculator{   
-    margin-left: 15%;
+    margin-left: 30%;
     margin-top: 15%;
     width: 400px;
     background-color: rgb(0, 0, 0, 0.3);
@@ -45,4 +118,30 @@ button{
 
 button:hover{
     background-color: white;
+}   
+
+.clight{
+    margin-left: 30%;
+    margin-top: 15%;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+.blight{
+    margin: 5px;
+    font-size: large;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 6px -3px 3px 3px;
+}
+.blight:hover{
+    background-color: rgb(145, 145, 145);
 }
